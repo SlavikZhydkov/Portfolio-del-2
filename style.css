@@ -1,0 +1,264 @@
+
+/* ==========================================
+   EGEN SKRIFTTYPE
+   Kobler til den lokale skrifttypen Huninn
+   ========================================== */
+
+@font-face {
+  font-family: "Huninn";
+  src: url("fonts/Huninn-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ==========================================
+   CONTAINER
+   Bestemmer bredden og plasseringen av innholdet
+   ========================================== */
+
+.container {
+  width: 1080px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   BODY
+   Generelle innstillinger for hele nettsiden
+   ========================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #440087, #54004C);
+  font-family: "Huninn", sans-serif;
+  font-weight: 400;
+}
+
+
+/* ==========================================
+   LENKER
+   Bestemmer utseendet til lenkene på nettsiden
+   ========================================== */
+
+a {
+  display: block;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+
+/* Viser en ramme rundt lenken når den velges med tastaturet */
+
+a:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   TEKST OG OVERSKRIFTER
+   Generell stil for avsnitt og overskrifter
+   ========================================== */
+
+p {
+  font-size: 20px;
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+}
+
+h2,
+h3 {
+  color: #e54646;
+  font-size: 30px;
+}
+
+
+/* ==========================================
+   NAVIGASJON
+   Plassering og utseende på navigasjonsmenyen
+   ========================================== */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+}
+
+
+/* Endrer bakgrunnsfargen når musen peker på en lenke */
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+
+/* ==========================================
+   MAIN
+   Bestemmer avstand og plassering mellom seksjonene
+   ========================================== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 35px 7% 100px 7%;
+
+}
+
+
+/* ==========================================
+   OM MEG
+   Bruker grid for å plassere tekst og bilde
+   ========================================== */
+
+.om_meg {
+  display: grid;
+  grid-template-columns: 2fr .9fr;
+  align-items: center;
+}
+
+
+/* ==========================================
+   BILDER
+   Bestemmer størrelse og beskjæring av bildene
+   ========================================== */
+
+img {
+  width: 30rem;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+
+/* ==========================================
+   TEKSTOMRÅDER
+   Bestemmer bredden på tekstfeltene
+   ========================================== */
+
+.text,
+.ferdigheterText,
+.VerktoyText {
+  width: 50%;
+  max-width: 50%;
+}
+
+
+/* ==========================================
+   PROSJEKTER
+   Sentrerer innholdet i prosjektseksjonen
+   ========================================== */
+
+.prosjekter {
+  text-align: center;
+}
+
+
+/* Avstand under overskriften og beskrivelsen */
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+
+/* ==========================================
+   PROSJEKTLISTE
+   Bruker grid for å plassere prosjektkortene
+   ========================================== */
+
+.project_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  align-items: center;
+  gap: 2rem;
+  margin-top: 30px;
+  justify-content: space-between;
+
+}
+
+
+/* Plasserer innholdet i hvert prosjektkort vertikalt */
+
+.project_box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Bestemmer størrelsen og beskjæringen av prosjektbildene */
+
+.project_box img {
+  width: 80%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+
+/* ==========================================
+   MINE FERDIGHETER
+   Plasserer ferdigheter og verktøy ved siden av hverandre
+   ========================================== */
+
+.ferdigheter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 300px;
+}
+
+
+/* ==========================================
+   FOOTER
+   Bestemmer utseendet til nederste del av nettsiden
+   ========================================== */
+
+
+/* Overskriften i kontaktseksjonen */
+
+footer h2 {
+  color: white;
+  font-size: 30px;
+}
+
+
+/* Bakgrunn og avstand i footer */
+
+footer {
+  padding: 40px 0;
+  background: #434343;
+}
+
+
+/* Plasserer kontaktinformasjon og sosiale medier ved siden av hverandre */
+
+footer .blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* ==========================================
+   SOSIALE MEDIER
+   Bruker grid for å plassere lenkene
+   ========================================== */
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px;
+}
